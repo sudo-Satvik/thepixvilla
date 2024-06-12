@@ -45,94 +45,116 @@
     --footer-height: 80px;
 }
 
-/* Global styles */
-body {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
-    background-color: var(--color-white);
-    color: var(--color-black);
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-/* Layout and components */
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--space-md);
-}
-
-header {
-    height: var(--header-height);
-    background-color: var(--color-grey-dark);
-    color: var(--color-white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 var(--space-md);
-}
-
-footer {
-    height: var(--footer-height);
-    background-color: var(--color-grey-light);
-    color: var(--color-black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 var(--space-md);
-}
-
-.section {
-    padding: var(--space-lg) 0;
-}
-
-.card {
+html,body{
+    width: 100%;
+    min-height: 100vh;
     background-color: var(--color-white);
-    border-radius: var(--border-radius-md);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: var(--space-md);
-    margin-bottom: var(--space-md);
 }
-
-a {
-    color: var(--color-grey-medium);
+a{
+    color: var(--color-black);
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--color-grey-dark);
-}
-
-/* Example of using the secondary font */
-.secondary-font {
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
-}
-
-/* Example of using different font sizes and weights */
-h1 {
-    font-size: var(--font-size-xxl);
-    font-weight: var(--font-weight-bold);
-}
-
-h2 {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-}
-
-h3 {
-    font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
 }
-
-p {
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
+.primary-font{
+    font-family: var(--font-family-primary);
+}
+.secondary-font{
+    font-family: var(--font-family-secondary);
+}
+header{
+    height: 100vh;
+    background-color: green;
+}
+header nav.nav-bar{
+    display: flex;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 1rem 3rem; /*Will be change in responsiveness*/
+    justify-content: space-between;
+    align-items: center;
+}
+header nav.nav-bar .logo img{
+    width: 200px;
+}
+header nav.nav-bar .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
-small {
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-light);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    body {
+        font-size: var(--font-size-sm);
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    header, footer {
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* Small Devices (phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Extra Extra Large Devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }
